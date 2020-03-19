@@ -13,14 +13,14 @@
   <body>
     <div class="container">
       <h1>Coronavirus calculator</h1>
-      <p>Por favor, responde a las siguientes preguntas</p>
+      <p>Por favor, responda a las siguientes preguntas:</p>
       <form id="myform">
 	<fieldset class="form-group">
 	  <div class="row">
 	    <legend class="col-form-label col-sm-10 pt-0">¿Nota que le falta el aire?</legend>
 	    <div class="col-sm-10">
               <div class="form-check">
-		<input class="form-check-input" type="radio" name="aire" id="1" value="1" checked>
+		<input class="form-check-input" type="radio" name="aire" id="1" value="1">
 		<label class="form-check-label" for="1">
 		  Sí
 		</label>
@@ -36,10 +36,10 @@
 	</fieldset>
 	<fieldset class="form-group">
 	  <div class="row">
-	    <legend class="col-form-label col-sm-10 pt-0">¿Notas algún síntoma extraño a nivel gastrointestinal?</legend>
+	    <legend class="col-form-label col-sm-10 pt-0">¿Nota algún síntoma a nivel gastrointestinal?</legend>
 	    <div class="col-sm-10">
               <div class="form-check">
-		<input class="form-check-input" type="radio" name="gastro" id="1" value="1" checked>
+		<input class="form-check-input" type="radio" name="gastro" id="1" value="1" >
 		<label class="form-check-label" for="1">
 		  Sí
 		</label>
@@ -55,10 +55,10 @@
 	</fieldset>
 	<fieldset class="form-group">
 	  <div class="row">
-	    <legend class="col-form-label col-sm-10 pt-0">¿Tienes mocos?</legend>
+	    <legend class="col-form-label col-sm-10 pt-0">¿Tiene mocos?</legend>
 	    <div class="col-sm-10">
               <div class="form-check">
-		<input class="form-check-input" type="radio" name="mocos" id="1" value="1" checked>
+		<input class="form-check-input" type="radio" name="mocos" id="1" value="1" >
 		<label class="form-check-label" for="1">
 		  Sí
 		</label>
@@ -77,7 +77,7 @@
 	    <legend class="col-form-label col-sm-10 pt-0">¿Tiene fiebre? (Superior a 37.5ºC)</legend>
 	    <div class="col-sm-10">
               <div class="form-check">
-		<input class="form-check-input" type="radio" name="fiebre" id="1" value="1" checked>
+		<input class="form-check-input" type="radio" name="fiebre" id="1" value="1" >
 		<label class="form-check-label" for="1">
 		  Sí
 		</label>
@@ -96,7 +96,7 @@
 	    <legend class="col-form-label col-sm-10 pt-0">¿Ha estado en contacto cercano con alguna persona que ha dado positivo en coronavirus?</legend>
 	    <div class="col-sm-10">
               <div class="form-check">
-		<input class="form-check-input" type="radio" name="contacto" id="1" value="1" checked>
+		<input class="form-check-input" type="radio" name="contacto" id="1" value="1" >
 		<label class="form-check-label" for="1">
 		  Sí
 		</label>
@@ -112,10 +112,10 @@
 	</fieldset>
 	<fieldset class="form-group">
 	  <div class="row">
-	    <legend class="col-form-label col-sm-10 pt-0">¿Notas dolor en los músculos?</legend>
+	    <legend class="col-form-label col-sm-10 pt-0">¿Nota dolor en los músculos?</legend>
 	    <div class="col-sm-10">
               <div class="form-check">
-		<input class="form-check-input" type="radio" name="musculos" id="1" value="1" checked>
+		<input class="form-check-input" type="radio" name="musculos" id="1" value="1" >
 		<label class="form-check-label" for="1">
 		  Sí
 		</label>
@@ -134,7 +134,7 @@
 	    <legend class="col-form-label col-sm-10 pt-0">¿Nota tos seca y continua?</legend>
 	    <div class="col-sm-10">
               <div class="form-check">
-		<input class="form-check-input" type="radio" name="tos" id="1" value="1" checked>
+		<input class="form-check-input" type="radio" name="tos" id="1" value="1">
 		<label class="form-check-label" for="1">
 		  Sí
 		</label>
@@ -150,10 +150,10 @@
 	</fieldset>
 	<fieldset class="form-group">
 	  <div class="row">
-	    <legend class="col-form-label col-sm-10 pt-0">¿Cúanto tiempo llevas con estos síntomas?</legend>
+	    <legend class="col-form-label col-sm-10 pt-0">¿Cúanto tiempo lleva con estos síntomas?</legend>
 	    <div class="col-sm-10">
               <div class="form-check">
-		<input class="form-check-input" type="radio" name="tiempo" id="1" value="1" checked>
+		<input class="form-check-input" type="radio" name="tiempo" id="1" value="1" >
 		<label class="form-check-label" for="1">
 		  20 días o más
 		</label>
@@ -183,7 +183,7 @@
               <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
             <div class="modal-body">
-              <p>Some text in the modal.</p>
+              <p>Miau.</p>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -200,25 +200,16 @@
 	  // alert (res);
 	  if (res >= 30)
 	  {
-	      $('.modal-body>p')[0].innerText = 'Según la información proporcionada, es posible que Ud. se encuentre infectado por coronavirus. Se le recomienda rellenar el formulario de la web https://www.coronamadrid.com/ donde le indicarán cómo proceder.';
+	      $('.modal-body')[0].innerHTML = '<p>Según la información proporcionada, es posible que Ud. se encuentre infectado por coronavirus. Se le recomienda rellenar el formulario de la web <a target="_blank" href="https://www.coronamadrid.com/">https://www.coronamadrid.com/</a> donde le indicarán cómo proceder.</p>';
 	      $("#myModal").modal();
 	  }
 	  else
 	  {
-	      $('.modal-body>p')[0].innerText = 'Como diría mi madre, estás más fresco que una lechuga. No obstante, si comienza a experimentar alguno de los síntomas, haga la prueba de nuevo';
+	       $('.modal-body>p')[0].innerText = 'Como diría mi madre, estás más fresco que una lechuga. No obstante, si comienza a experimentar alguno de los síntomas, haga la prueba de nuevo.';
 	      $("#myModal").modal();
 	  }
       }
-    </script>
-
-    <script>
-      $(document).ready(function(){
-	  $("#").click(function(){
-	      $("#myModal").modal();
-	  });
-      });
-    </script>
-    
+    </script>    
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
